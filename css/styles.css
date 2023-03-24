@@ -62,7 +62,7 @@ header{
 
 
 
-@media  (max-width: 900px){
+@media screen and  (max-width: 610px){
 
     .navbar{
         padding: 0;
@@ -108,12 +108,17 @@ header{
         margin: 25px 0;
         font-size: 1.2em;
     }
+
+    .btn{
+        justify-content: center;
+        left: 30%;
+    }
+    
 }
 
 /* NAV BAR END */
 
 /* BUTTON DISCORD START */
-
 
 
 .center{
@@ -129,7 +134,7 @@ header{
 .btn{
     height: 50px;
     width: 150px;
-   background-color: transparent;
+    background-color: transparent;
 }
 
 .btn a {
@@ -142,6 +147,18 @@ header{
     color: black;
 }
 
+
+/* BUTTON RESPONSIVE */
+
+@media screen and (max-width: 600px){
+    .center{
+        left: 30%;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
 
 /* BUTTON DISCORD END */
 
