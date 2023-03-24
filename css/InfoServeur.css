@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+header{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/landscape.jpg); 
+    background-size: cover;
+}
+
+/* NAV BAR START */
+
+.navbar{
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+}
+
+.navbar .logo{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+
+.navbar .nav-links ul{
+    display: flex;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a{
+    color: rgb(186, 10, 10);
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 35px;
+}
+
+
+
+@media  (max-width: 900px){
+
+    .navbar{
+        padding: 0;
+    }
+
+    .navbar .logo{
+        position: absolute;
+        top: 40px;
+        left: 5px;
+    }
+
+
+    .navbar .menu-hamburger{
+        display: block;
+    }    
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(250, 235, 215, 0.151);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
+
+/* NAV BAR END */
+
+/* BUTTON DISCORD START */
+
+
+
+.center{
+    margin: 0;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    padding-top: 250px;
+}
+
+.btn{
+    height: 50px;
+    width: 150px;
+    background-color: transparent;
+}
+
+.btn a {
+    color: white;
+}
+
+.btn:hover{
+    background-color: rgba(2, 143, 35, 0.329);
+    border: 2px solid rgb(44, 71, 44);
+    color: black;
+}
+
+
+/* BUTTON DISCORD END */
+
+
+
+  .card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: #ffffff2a;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+  }
+  .card:before,
+  .card:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+    z-index:-1;
+  }
+  
+ 
+  .card .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+  
+  .card:hover .imgBx
+  {
+    bottom: 80px;
+  }
+
+  .card .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .card .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+  }
+
+  .card .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #777;
+   text-transform: uppercase;
+  } 
+
+  .card .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+   }
+   
+
+
+
+@media screen and (min-width: 900px){
+    .box.card{
+        width: 1200px;
+        display: grid;
+        grid-gap: 15px;
+        margin: 0 auto;
+      }
+}
